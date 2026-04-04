@@ -82,5 +82,24 @@ function calcularFactorial(){
     }
 
     document.getElementById("resFactorial").innerHTML = "El factorial de "+ n + "es: "+resultado
-    
+
+}
+
+function buscarMultiplos(){
+    let inicio = parseInt(document.getElementById("rangoInicio").value)
+    let fin = parseInt(document.getElementById("rangoFin").value)
+
+    let resultados = []
+    for(let i= inicio; i <= fin; i++){
+        if(i % 6 === 0){
+            resultados.push(i)
+        }
+
+    }
+    if(resultados.length > 0 ){
+        document.getElementById("resMultiplos").innerHTML = "Los multiplos de 6 son: " + resultados.join(", ")
+    }else{
+        document.getElementById("resMultiplos").innerHTML = "No se encontraron multiplos de 6 en ese rango."
+    }
+
 }
