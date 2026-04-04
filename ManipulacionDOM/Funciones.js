@@ -31,3 +31,56 @@ function numeroDosDigitos(){
 
 
 }
+
+function calcularIngredientes(){
+    let personas = parseFloat(document.getElementById("comensales").value)
+
+    let papas = personas * 0.2
+    let huevos = personas * 1
+    let cebolla = personas * 60
+
+    document.getElementById("resPapas").innerHTML = "Total Papas Kg: " + papas
+    document.getElementById("resHuevos").innerHTML = "Total Huevos: " + huevos
+    document.getElementById("resCebolla").innerHTML = "Total Cebolla: " + cebolla
+
+}
+
+function compararNumeros(){
+    let numeroA = parseInt(document.getElementById("numA").value)
+    let numeroB = parseInt(document.getElementById("numB").value)
+
+    let mensaje = " "
+    if(numeroA > numeroB){
+        mensaje = `el primer numero ${numeroA} es mayor`
+    }
+    else if(numeroB > numeroA){
+        mensaje = `el segundo numero ${numeroB} es mayor`
+    }
+    else{
+        mensaje = "Ambos numeros son iguales"
+    }
+
+    document.getElementById("resComparacion").innerHTML = mensaje
+
+
+}
+
+function calcularFactorial(){
+    let n = parseInt(document.getElementById("factorial").value)
+
+    if(n<0){
+        document.getElementById("resFactorial").innerHTML = "No existe factorial de negativos."
+        return;
+
+    }
+
+    let resultado = 1
+
+    for (let i = 1; i <= n; i++) {
+        resultado = resultado * i
+        
+    }
+
+    document.getElementById("resFactorial").innerHTML = "El factorial de "+ n + "es: "+resultado
+    
+}
