@@ -54,7 +54,18 @@
 
                 </div>
             </div>
-            <div class="cuadro">contenido 5</div>
+            <div class="cuadro">
+                <div>
+                    <h3>Adivina el Numero (0-100)</h3>
+                    <p>Intentos restantes:<span id="cuentaRegresiva">15</span></p>
+                    <label for="intentoUsuario">Adivina el Numero</label>
+                    <input type="number" id="intentoUsuario" placeholder="Tu numero">
+
+                    <button onclick="comprobarIntento()">Adivinar</button>
+                    <p id="pista"></p>
+                    <p> Numeros ingresados: <span id="historial"></span></p>
+                </div>
+            </div>
             <div class="cuadro">contenido 6</div>
             <div class="cuadro">
                 <div>
@@ -90,12 +101,59 @@
                     <h3 id="resMultiplos"></h3>
                 </div>
             </div>
-            <div class="cuadcro">contenido 10</div>
-            <div class="cuadro">contenido 11</div>
-            <div class="cuadro">contenido 12</div>
-            <div class="cuadro">contenido 13</div>
-            <div class="cuadro">contenido 14</div>
-            <div class="cuadro">contenido 15</div>
+            <div class="cuadro">
+                <div>
+                    <h3>Clasificador de Pares e Impares</h3>
+                    <button onclick="clasificarNumeros()">Generar y clasificar</button>
+                    <p><strong>Arreglo Original: </strong> <span id="arrTotal"></span></p>
+                    <p><strong>Pares:</strong><span id="arrPares"></span></p>
+                    <p><strong>Impares:</strong><span id="arrImpares"></span></p>
+                </div>
+            </div>
+            <div class="cuadro">
+                 <div>
+                    <h3>ARRAYS</h3>
+                    <button onclick="procesarArreglo()">Generar</button>
+                    <p><strong>Original:</strong> <span id="arrayOriginal"></span></p>
+                    <p><strong>Sin multiplo de 3:</strong> <span id="arrayFiltrado"></span></p>
+                </div>
+
+            </div>
+            <div class="cuadro">
+                <div>
+                    <h3>Clasificador de Triangulos</h3>
+                    <input type="number" id="ladoA" placeholder="Lado A">
+                    <input type="number" id="ladoB" placeholder="Lado B">
+                    <input type="number" id="ladoC" placeholder="Lado C">
+
+                    <button onclick="analizarTriangulo()">Analizar</button>
+                    <h4 id="resTipo"></h4>
+                    <h4 id="resAreaTri"></h4>
+
+                </div>
+            </div>
+            <div class="cuadro">
+                <div>
+                    <h3>Contador de caracteres</h3>
+                    <label for="contador">Contador de caracteres</label>
+                    <input type="text" id="contador" placeholder="Escribe palabras (ej: Hola)">
+                    <button onclick="procesarPalabras()">Analizar</button>
+                    <h4><strong>Longitud de cada palabra:</strong> <span id="listaLongitudes"></span></h4>
+                    <h4><strong>Total caracteres de la oracion:</strong> <span id="totalCaracteres"></span></h4>
+
+                </div>
+            </div>
+            <div class="cuadro">
+                <div>
+                    <h3>Invertir Arreglos</h3>
+                    <button onclick="invertirArreglos()">Generar e Invertir</button>
+                    
+                    <h4><em>Original:</em> <span id="arrOriginal"></span></h4>
+                    <h4><strong>Invertido (Manual):</strong> <span id="arrManual"></span></h4>
+                    <h4><em>Invertido (Reverse):</em> <span id="arrReverse"></span></h4>
+                </div>
+            </div>
+            <div class="cuadro">contenido 15</div>s
         </main>
         <footer></footer>
 
